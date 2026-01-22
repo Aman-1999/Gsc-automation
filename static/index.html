@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI SEO Analyst</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Login View -->
+        <div id="login-view" class="view hidden">
+            <div class="login-container">
+                <h1>AI SEO Analyst</h1>
+                <p>Connect your Search Console to get AI-powered insights.</p>
+                <button id="login-btn" class="primary-btn">
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="G" class="google-icon">
+                    Sign in with Google
+                </button>
+            </div>
+        </div>
+
+        <!-- Dashboard View -->
+        <div id="dashboard-view" class="view hidden">
+            <header>
+                <div class="logo">AI SEO Analyst</div>
+                <div class="controls">
+                    <select id="site-selector">
+                        <option value="">Select Property...</option>
+                    </select>
+                    <button id="logout-btn" class="secondary-btn">Logout</button>
+                </div>
+            </header>
+            
+            <main class="chat-container">
+                <div id="chat-history">
+                    <div class="message system">
+                        <div class="content">Hello! I'm your AI SEO Analyst. Select a property above and ask me anything about your traffic.</div>
+                    </div>
+                </div>
+                
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Ask about your traffic, clicks, or queries...">
+                    <button id="send-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
