@@ -136,6 +136,8 @@ select {
     margin: 0 auto;
     width: 100%;
     padding: 1rem;
+    min-height: 0;
+    overflow: hidden;
 }
 
 #chat-history {
@@ -211,4 +213,23 @@ select {
 
 #send-btn:hover {
     color: var(--accent-hover);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
 }
